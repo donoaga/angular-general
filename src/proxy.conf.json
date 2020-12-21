@@ -1,0 +1,10 @@
+{
+  "/api-fake/*": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+  "/posts/*": {
+    "target": "https://jsonplaceholder.typicode.com/",
+    "secure": false
+  }
+}

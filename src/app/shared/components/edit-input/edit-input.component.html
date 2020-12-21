@@ -1,0 +1,4 @@
+<ng-container>
+  <div *ngIf="!editMode">{{value | textTruncate}}</div>
+  <input *ngIf="editMode" (ngModelChange)="onValueChanged()" [name]="value" [(ngModel)]="value" [type]="inputType">
+</ng-container>

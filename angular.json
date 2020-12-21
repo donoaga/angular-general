@@ -24,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -62,7 +62,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-general:build"
+            "browserTarget": "angular-general:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -88,7 +89,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -119,6 +120,13 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-general"
+    }
+  },
+  "defaultProject": "angular-general",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss",
+      "style": "scss"
+    }
+  }
 }

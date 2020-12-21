@@ -1,0 +1,26 @@
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+  <div class="input-block">
+    <input type="text" formControlName="title" placeholder="type title"
+           [className]="hasError('title') ? 'invalid' :''"/>
+    <ng-container *ngIf="hasError('title')">
+      <span class="error" *ngIf="this.formGroup.get('title').errors.required">This field is required</span>
+    </ng-container>
+  </div>
+  <div class="input-block">
+    <input type="text" formControlName="author" placeholder="type author"
+           [className]="hasError('author') ? 'invalid' :''"/>
+    <ng-container *ngIf="hasError('author')">
+      <span class="error" *ngIf="this.formGroup.get('author').errors.isNotCamelCase">Should be camel case</span>
+      <span class="error" *ngIf="this.formGroup.get('author').errors.required">This field is required</span>
+    </ng-container>
+  </div>
+  <div class="input-block">
+
+    <input type="number" formControlName="price" placeholder="type price"
+           [className]="hasError('price') ? 'invalid' :''"/>
+    <ng-container *ngIf="hasError('price')">
+      <span class="error" *ngIf="this.formGroup.get('price').errors.required">This field is required</span>
+    </ng-container>
+  </div>
+  <input type="submit" value="add"/>
+</form>

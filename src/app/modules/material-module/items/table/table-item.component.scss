@@ -1,0 +1,22 @@
+.search-box {
+  display: flex;
+}
+table {
+  width: 100%;
+
+  ::ng-deep {
+
+    mat-checkbox {
+      margin: 10px;
+
+      .mat-checkbox-layout {
+        margin-bottom: 0;
+      }
+    }
+
+    .mat-footer-cell {
+      margin: auto;
+
+    }
+  }
+}

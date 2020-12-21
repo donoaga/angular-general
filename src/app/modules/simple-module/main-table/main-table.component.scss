@@ -1,0 +1,27 @@
+.main-section {
+  max-width: 1000px;
+  margin: auto;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid #000000;
+}
+
+td, th {
+  text-align: left;
+  padding: 8px;
+  width: 25%;
+}
+
+tr {
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  background-color: #dddddd;
+}
+
+tr:first-child {
+  background-color: #ffffff;
+}

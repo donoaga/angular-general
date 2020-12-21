@@ -1,0 +1,13 @@
+<div class="dashboard-tem-section">
+  <div class="chart-wrapper" *ngFor="let chart of lineChartsData; index as i">
+    <canvas baseChart
+            [datasets]="chart"
+            [labels]="lineChartLabels"
+            [options]="lineChartOptions"
+            [colors]="lineChartColors"
+            [legend]="lineChartLegend"
+            [chartType]="i % 2 === 0 ? 'line' : 'bar'"
+    >
+    </canvas>
+  </div>
+</div>

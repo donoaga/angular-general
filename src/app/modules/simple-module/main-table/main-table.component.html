@@ -1,0 +1,30 @@
+<div class="main-section">
+  <app-add-item-form></app-add-item-form>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Price</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let item of tableItems; let i = index">
+      <td>
+        <app-edit-input [editMode]="item.editMode" [(value)]="item.title"></app-edit-input>
+      </td>
+      <td>
+        <app-edit-input [editMode]="item.editMode" [(value)]="item.author"></app-edit-input>
+      </td>
+      <td>
+        <app-edit-input [editMode]="item.editMode" [(value)]="item.price"></app-edit-input>
+      </td>
+      <td class="something">
+        <app-actions-elements
+          [item]="item"
+          (onSaveClicked)="onSaveClicked(item)"
+          (onEditClicked)="onEditClicked(item)">
+        </app-actions-elements>
+      </td>
+    </tr>
+  </table>
+
+</div>

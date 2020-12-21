@@ -1,0 +1,33 @@
+<div class="form-page-container">
+  <form [formGroup]="profileForm">
+    <mat-form-field>
+      <mat-label>First name</mat-label>
+      <input matInput formControlName="firstNameControl">
+      <mat-error *ngIf="hasError('firstNameControl','required')">
+        First Name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Last Name</mat-label>
+      <input matInput formControlName="lastNameControl">
+      <mat-error *ngIf="hasError('lastNameControl','required')">
+        Last Name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput matInput formControlName="emailFormControl">
+      <mat-error *ngIf="hasError('emailFormControl','email') && !hasError('emailFormControl','required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="hasError('emailFormControl','required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <ckeditor [editor]="Editor" formControlName="editorControl" [data]="editorData"></ckeditor>
+    <mat-error *ngIf="hasError('editorControl','required') && profileForm.get('editorControl').dirty">
+      Try our editor!
+    </mat-error>
+    <button mat-flat-button color="primary" (click)="validate()">Validate</button>
+  </form>
+</div>

@@ -1,0 +1,32 @@
+form {
+  margin: 20px 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+input {
+  margin-right: 15px;
+  padding: 5px 10px;
+}
+
+input.invalid {
+  border-color: red;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  color: red;
+}
+
+input[type='submit'] {
+  border-radius: 20px;
+  border: none;
+  padding: 5px 15px;
+  background-color: #dddddd;
+  outline: none;
+  cursor: pointer;
+}

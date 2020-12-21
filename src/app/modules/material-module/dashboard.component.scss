@@ -1,0 +1,68 @@
+.example-container {
+  height: 100vh;
+  width: 100%;
+
+  ::ng-deep {
+
+    .mat-drawer-content {
+      padding: 50px;
+    }
+
+    .mat-drawer-inner-container {
+      overflow: hidden;
+    }
+
+    .mat-list-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      h5 {
+        margin: 0;
+      }
+    }
+  }
+
+  .main-menu-icon {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .dashboard-menu-icon {
+      margin: 10px;
+    }
+
+    h4 {
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .example-container {
+    height: 100vh;
+    width: 100%;
+
+    ::ng-deep {
+
+      .mat-drawer-content {
+        padding: 15px;
+      }
+
+      .mat-drawer-inner-container {
+        overflow: hidden;
+      }
+
+      .mat-list-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        h5 {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
